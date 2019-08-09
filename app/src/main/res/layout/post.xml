@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/profile_img"
+        app:civ_border_color="#1100FF"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/account_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_dp"
+        android:layout_toRightOf="@id/profile_image"
+        android:text="account name"
+        android:textColor="#000"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/time_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_name"
+        android:layout_marginLeft="@dimen/margin_dp"
+        android:layout_toRightOf="@id/profile_image"
+        android:text="time hr" />
+
+    <TextView
+        android:id="@+id/post_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_marginTop="@dimen/margin_dp"
+        android:text="Post Header"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/post_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_header"
+        android:layout_marginTop="@dimen/margin_dp"
+        android:text="Post Description"
+        android:textColor="#000"
+        android:textSize="17sp" />
+
+    <RelativeLayout
+        android:id="@+id/post_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_description"
+        android:layout_marginTop="@dimen/margin_dp">
+
+        <ImageView
+            android:id="@+id/post_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/post_img" />
+
+        <com.like.LikeButton
+
+            app:icon_type="heart"
+            app:icon_size="45dp"
+            android:id="@+id/love"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/download_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleX="0"
+            android:scaleY="0"
+            android:src="@drawable/download_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post_images"
+        android:paddingTop="@dimen/margin_dp"
+        android:background="@android:color/transparent"
+        >
+
+        <LinearLayout
+            android:id="@+id/rating_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:contentDescription="react - reating">
+
+            <TextView
+                android:id="@+id/number_of_ratting_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/rating_icon"
+                android:text=" number"
+                android:textColor="#00BCD4"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favorite_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:contentDescription="add to favorite"
+            >
+
+            <TextView
+                android:id="@+id/number_of_favorite_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/nolove24"
+                android:text=" number"
+                android:textColor="#E91E63"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

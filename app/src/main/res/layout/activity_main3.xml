@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_galaxy"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="50dp"
+    android:paddingRight="18dp">
+
+
+    <ImageView
+        android:layout_width="189dp"
+        android:layout_height="108dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_memory_black_24dp" />
+
+
+
+    <EditText
+        android:id="@+id/input_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF" />
+
+    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+        android:id="@+id/input_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="30dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/hint_pass"
+        android:inputType="textPassword"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF"
+        app:drawable_hide="@drawable/ic_visibility_white_24dp"
+        app:drawable_show="@drawable/ic_visibility_white_24dp" />
+
+
+    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+        android:id="@+id/btn_signup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/background_login"
+        android:text="@string/sign_up"
+        android:textColor="#000"
+        />
+
+
+    <TextView
+        android:id="@+id/link_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:onClick="log"
+        android:text="Already a member? Login"
+        android:textColor="#FFF"
+        android:textSize="16dip" />
+
+</LinearLayout>
